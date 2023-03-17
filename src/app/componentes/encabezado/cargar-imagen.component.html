@@ -1,0 +1,22 @@
+<div class="container" *ngIf="sujeto">
+    <div class="encuadre" style="font-family:'Courier New', Courier, monospace">
+    <div class="row">
+        <div>
+        <form (ngSubmit)="onUpdate2()" novalidate #f="ngForm">
+            <div class="form-group">
+            <label for="img"><h4><b>Nombre y apellido</b></h4></label>
+            <input type="file" class="form-control" id="img" name="img" [(ngModel)]="sujeto.img" (change)="uploadImage($event)"
+            accept=".jpg, .jpeg, .png">
+             </div>
+
+        <button class="btn btn-info">
+            <b>Actualizar</b>
+        </button>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+<!--<div class="container">
+    hola hola
+</div>-->

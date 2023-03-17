@@ -1,0 +1,35 @@
+<div class="encuadre">
+  <div>
+  <img src="./assets/RedesUniverso.jpg" width="100%" height="300" alt="">  
+  <img src="{{sujeto[0].img}}" class= "perfil_redondo" style="position: relative; margin: -100px 30px -70px">
+  </div>
+ <div *ngFor="let Sujeto of sujeto" >
+  <a *ngIf="isLogged" class="fa fa-pencil" style= "position: relative; margin: 0px 0px 0px 800px" routerLink="/editacercade/{{Sujeto.id}}"></a>
+ </div>
+  
+  <div class="container" style="position: relative; margin: 80px 0px 0px 0px">
+  <div class="row">
+    <div class="col-4">   
+      <h4>
+        <p *ngFor="let Sujeto of sujeto">
+            <b class="parrafo" style="font-family:'Courier New', Courier, monospace">{{Sujeto.nombre}}</b>
+          </p>  
+        </h4> 
+    </div>
+    <div class="col-8">  
+      <div class="col">
+        <h5 *ngFor="let Sujeto of sujeto">
+          <i class="parrafo" style="font-family:'Courier New', Courier, monospace">{{Sujeto.descripcion}}</i>
+        </h5>  
+      
+      </div>    
+  
+  </div>
+  </div>
+  </div> 
+    <div class="container">
+     <div class="row">
+      
+    </div>  
+  </div>
+  </div>

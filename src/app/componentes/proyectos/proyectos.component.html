@@ -1,0 +1,25 @@
+<div class="encuadre" style="font-family:'Courier New', Courier, monospace">
+  <div class="proyectos">
+    <div class="row">
+    <h1><b> 
+  Proyectos <a class="fa fa-plus-square" routerLink="/nuevoproy" *ngIf="isLogged"></a>
+  </b> </h1>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+  <table class="table">
+      <tbody>
+        <tr *ngFor="let Proyecto of proyecto">
+          <td><h3><b>{{Proyecto.nombreP}}</b></h3></td>
+          <td><h5>{{Proyecto.descripcionP}}</h5></td>
+          <td *ngIf="isLogged"><a class="fa fa-pencil" routerLink="/editproy/{{Proyecto.id}}"></a></td>
+          <td *ngIf="isLogged"><a class="fa fa-times" href="#" (click)="delete(Proyecto.id)"></a></td>
+        </tr>
+      </tbody>
+
+  </table>
+</div>
+
+</div>
+  </div>
+  </div>

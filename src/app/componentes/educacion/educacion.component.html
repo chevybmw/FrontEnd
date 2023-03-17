@@ -1,0 +1,25 @@
+<div class="encuadre" style="font-family:'Courier New', Courier, monospace">
+  <div class="educacion">
+    <div class="row">
+    <h1><b> 
+  Educacion <a class="fa fa-plus-square" routerLink="/nuevaedu" *ngIf="isLogged"></a>
+  </b> </h1>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+  <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td><h3><b>{{Educacion.nombreE}}</b></h3></td>
+          <td><h5>{{Educacion.descripcionE}}</h5></td>
+          <td *ngIf="isLogged"><a class="fa fa-pencil" routerLink="/editedu/{{Educacion.id}}"></a></td>
+          <td *ngIf="isLogged"><a class="fa fa-times" href="#" (click)="delete(Educacion.id)"></a></td>
+        </tr>
+      </tbody>
+
+  </table>
+</div>
+
+</div>
+  </div>
+  </div>
